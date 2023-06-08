@@ -1,0 +1,102 @@
+bus
+lamborghini
+bicycle
+wallet
+pencil and eraser
+helmet
+washing machine
+computer
+sweater
+toothbrush
+arm
+ankle
+arrow
+atm
+acid
+alphabet
+bleach
+baby oil
+boat
+ball
+belt
+binoculars
+bluetooth
+battery
+castle
+clock
+cable
+clippers
+phone
+camera
+clothes
+casino
+dishwasher
+dogleg
+diesel
+diamond
+dining table
+diaper
+dipole
+deoderant
+expressway
+enchilada
+ear
+esophagus
+earth
+electricity
+fire pit
+fly swatter
+foot locker
+fishbowl
+fireplace
+finger
+fire alarm
+golfcart
+golf club
+gatorade
+gaming chair
+headstone
+hockey stick
+hospital bed
+hairdryer
+igloo
+incubator
+internet
+icebreaker
+jump
+joystick
+jukebox
+lamp
+lantern
+laundry
+laptop
+mirror
+microwave
+mattress
+napkin
+nail
+ornament
+puppet
+projector
+q tip
+racket
+radio
+rag doll
+sandpaper
+scissors
+socks
+tank
+tape
+umbrella
+ukelele
+vacuum
+valuables
+wall
+wand
+x ray
+xbox
+yahtzee
+yoyo
+yard stick
+zipper
+zip lock
