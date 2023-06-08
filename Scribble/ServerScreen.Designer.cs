@@ -35,6 +35,7 @@
             this.joinButton = new System.Windows.Forms.Button();
             this.createButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.errorLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // leftBackLabel
@@ -126,11 +127,25 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "OR";
             // 
+            // errorLabel
+            // 
+            this.errorLabel.AutoSize = true;
+            this.errorLabel.BackColor = System.Drawing.Color.Transparent;
+            this.errorLabel.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorLabel.ForeColor = System.Drawing.Color.Green;
+            this.errorLabel.Location = new System.Drawing.Point(1344, 915);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(260, 30);
+            this.errorLabel.TabIndex = 8;
+            this.errorLabel.Text = "Error!  Please try again!";
+            this.errorLabel.Visible = false;
+            // 
             // ServerScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Orange;
+            this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.createButton);
             this.Controls.Add(this.joinButton);
@@ -154,5 +169,6 @@
         private System.Windows.Forms.Button joinButton;
         private System.Windows.Forms.Button createButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label errorLabel;
     }
 }

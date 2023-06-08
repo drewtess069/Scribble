@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Sockets;
 
 namespace Scribble
 {
     public partial class Form1 : Form
     {
+        //Change IP for any any sever
+        public static string ip = "10.63.42.206";
+        
         public Form1()
         {
             InitializeComponent();
@@ -42,6 +47,7 @@ namespace Scribble
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             ChangeScreen(this, new MenuScreen());
         }
     }
