@@ -15,6 +15,8 @@ namespace Scribble
 {
     public partial class ServerScreen : UserControl
     {
+        Network internet = new Network(Form1.ip);
+        
         public ServerScreen()
         {
             InitializeComponent();
@@ -22,44 +24,30 @@ namespace Scribble
 
         private void createButton_Click(object sender, EventArgs e)
         {
-            IPEndPoint ipep = new IPEndPoint(IPAddress.Parse("10.63.42.206"), 9050);
-
-            Socket newsock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-
-            newsock.Bind(ipep);
-
-            newsock.Listen(10);
-
-            Form1.client = newsock.Accept();
+            internet.ServerSide();
+           
 
             Form1.ChangeScreen(this, new ModeScreen());
         }
 
         private void joinButton_Click(object sender, EventArgs e)
         {
-            IPEndPoint ipep = new IPEndPoint(IPAddress.Parse("10.63.42.206"), 9050);
-            try
+            
+            if (internet.ClientSide() == 0)
             {
-                Form1.server.Connect(ipep);
-                Form1.ChangeScreen(this, new ServerHub());
+                
+                errorLabel.Visible = true;
+                
             }
-            catch (SocketException)
+            else
             {
                 errorLabel.Visible = true;
-                Refresh();
-               
-                errorLabel.Visible = false;
+                errorLabel.Text = "Connecting...";
                 Thread.Sleep(1000);
-
-                
-
+                Form1.ChangeScreen(this, new ModeScreen());
             }
             
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
