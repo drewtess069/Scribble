@@ -136,7 +136,7 @@
             this.phrasesButton.Name = "phrasesButton";
             this.phrasesButton.Size = new System.Drawing.Size(298, 185);
             this.phrasesButton.TabIndex = 10;
-            this.phrasesButton.Text = "Phrases";
+            this.phrasesButton.Text = "Movies";
             this.phrasesButton.UseVisualStyleBackColor = false;
             this.phrasesButton.Click += new System.EventHandler(this.phrasesButton_Click);
             // 

@@ -71,6 +71,15 @@ namespace Scribble.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string FoodFile {
+            get {
+                return ResourceManager.GetString("FoodFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap image {
@@ -102,6 +111,15 @@ namespace Scribble.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string ObjectFile {
+            get {
+                return ResourceManager.GetString("ObjectFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap pencil {
@@ -119,6 +137,24 @@ namespace Scribble.Properties {
                 object obj = ResourceManager.GetObject("pencil-drawing-doodle-clip-art-png-favpng-nvHB5btG59KAuiHzEVCy2yzYF-removebg-prev" +
                         "iew", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string PeopleFile {
+            get {
+                return ResourceManager.GetString("PeopleFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string PlaceFile {
+            get {
+                return ResourceManager.GetString("PlaceFile", resourceCulture);
             }
         }
         
