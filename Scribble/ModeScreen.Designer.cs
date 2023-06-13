@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.foodButton = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.objectButton = new System.Windows.Forms.Button();
             this.placeButton = new System.Windows.Forms.Button();
             this.peopleButton = new System.Windows.Forms.Button();
             this.phrasesButton = new System.Windows.Forms.Button();
@@ -38,6 +38,7 @@
             this.randomButton = new System.Windows.Forms.Button();
             this.animalButton = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.selectionLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -69,22 +70,24 @@
             this.foodButton.TabIndex = 3;
             this.foodButton.Text = "Food";
             this.foodButton.UseVisualStyleBackColor = false;
+            this.foodButton.Click += new System.EventHandler(this.foodButton_Click);
             // 
-            // button3
+            // objectButton
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 3;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Comic Sans MS", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(1253, 350);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(298, 185);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Objects";
-            this.button3.UseVisualStyleBackColor = false;
+            this.objectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.objectButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.objectButton.FlatAppearance.BorderSize = 3;
+            this.objectButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.objectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.objectButton.Font = new System.Drawing.Font("Comic Sans MS", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.objectButton.ForeColor = System.Drawing.Color.Black;
+            this.objectButton.Location = new System.Drawing.Point(1253, 350);
+            this.objectButton.Name = "objectButton";
+            this.objectButton.Size = new System.Drawing.Size(298, 185);
+            this.objectButton.TabIndex = 4;
+            this.objectButton.Text = "Objects";
+            this.objectButton.UseVisualStyleBackColor = false;
+            this.objectButton.Click += new System.EventHandler(this.objectButton_Click);
             // 
             // placeButton
             // 
@@ -101,6 +104,7 @@
             this.placeButton.TabIndex = 5;
             this.placeButton.Text = "Places";
             this.placeButton.UseVisualStyleBackColor = false;
+            this.placeButton.Click += new System.EventHandler(this.placeButton_Click);
             // 
             // peopleButton
             // 
@@ -117,6 +121,7 @@
             this.peopleButton.TabIndex = 6;
             this.peopleButton.Text = "People";
             this.peopleButton.UseVisualStyleBackColor = false;
+            this.peopleButton.Click += new System.EventHandler(this.peopleButton_Click);
             // 
             // phrasesButton
             // 
@@ -133,6 +138,7 @@
             this.phrasesButton.TabIndex = 10;
             this.phrasesButton.Text = "Movies";
             this.phrasesButton.UseVisualStyleBackColor = false;
+            this.phrasesButton.Click += new System.EventHandler(this.phrasesButton_Click);
             // 
             // actionsButton
             // 
@@ -149,6 +155,7 @@
             this.actionsButton.TabIndex = 9;
             this.actionsButton.Text = "Actions";
             this.actionsButton.UseVisualStyleBackColor = false;
+            this.actionsButton.Click += new System.EventHandler(this.actionsButton_Click);
             // 
             // randomButton
             // 
@@ -165,6 +172,7 @@
             this.randomButton.TabIndex = 8;
             this.randomButton.Text = "Random";
             this.randomButton.UseVisualStyleBackColor = false;
+            this.randomButton.Click += new System.EventHandler(this.randomButton_Click);
             // 
             // animalButton
             // 
@@ -181,6 +189,7 @@
             this.animalButton.TabIndex = 7;
             this.animalButton.Text = "Animals";
             this.animalButton.UseVisualStyleBackColor = false;
+            this.animalButton.Click += new System.EventHandler(this.animalButton_Click);
             // 
             // button10
             // 
@@ -198,11 +207,24 @@
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
+            // selectionLabel
+            // 
+            this.selectionLabel.AutoSize = true;
+            this.selectionLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectionLabel.ForeColor = System.Drawing.Color.Red;
+            this.selectionLabel.Location = new System.Drawing.Point(865, 301);
+            this.selectionLabel.Name = "selectionLabel";
+            this.selectionLabel.Size = new System.Drawing.Size(65, 26);
+            this.selectionLabel.TabIndex = 12;
+            this.selectionLabel.Text = "label2";
+            this.selectionLabel.Visible = false;
+            // 
             // ModeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Orange;
+            this.Controls.Add(this.selectionLabel);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.phrasesButton);
             this.Controls.Add(this.actionsButton);
@@ -210,12 +232,13 @@
             this.Controls.Add(this.animalButton);
             this.Controls.Add(this.peopleButton);
             this.Controls.Add(this.placeButton);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.objectButton);
             this.Controls.Add(this.foodButton);
             this.Controls.Add(this.label1);
             this.Name = "ModeScreen";
             this.Size = new System.Drawing.Size(1920, 1080);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -223,7 +246,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button foodButton;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button objectButton;
         private System.Windows.Forms.Button placeButton;
         private System.Windows.Forms.Button peopleButton;
         private System.Windows.Forms.Button phrasesButton;
@@ -231,5 +254,6 @@
         private System.Windows.Forms.Button randomButton;
         private System.Windows.Forms.Button animalButton;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label selectionLabel;
     }
 }

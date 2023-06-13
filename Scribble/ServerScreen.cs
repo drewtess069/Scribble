@@ -24,7 +24,7 @@ namespace Scribble
 
         private void createButton_Click(object sender, EventArgs e)
         {
-            internet.ServerSide();
+            //internet.ServerSide();
            
 
             Form1.ChangeScreen(this, new ModeScreen());
