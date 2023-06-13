@@ -36,6 +36,10 @@
             this.createButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.errorLabel = new System.Windows.Forms.Label();
+            this.clientInput = new System.Windows.Forms.TextBox();
+            this.serverInput = new System.Windows.Forms.TextBox();
+            this.severLabel = new System.Windows.Forms.Label();
+            this.clientLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // leftBackLabel
@@ -140,11 +144,53 @@
             this.errorLabel.Text = "Error!  Please try again!";
             this.errorLabel.Visible = false;
             // 
+            // clientInput
+            // 
+            this.clientInput.Font = new System.Drawing.Font("Comic Sans MS", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clientInput.Location = new System.Drawing.Point(1334, 417);
+            this.clientInput.Name = "clientInput";
+            this.clientInput.Size = new System.Drawing.Size(270, 56);
+            this.clientInput.TabIndex = 10;
+            // 
+            // serverInput
+            // 
+            this.serverInput.Font = new System.Drawing.Font("Comic Sans MS", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.serverInput.Location = new System.Drawing.Point(320, 417);
+            this.serverInput.Name = "serverInput";
+            this.serverInput.Size = new System.Drawing.Size(270, 56);
+            this.serverInput.TabIndex = 11;
+            // 
+            // severLabel
+            // 
+            this.severLabel.AutoSize = true;
+            this.severLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.severLabel.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.severLabel.Location = new System.Drawing.Point(347, 370);
+            this.severLabel.Name = "severLabel";
+            this.severLabel.Size = new System.Drawing.Size(214, 29);
+            this.severLabel.TabIndex = 12;
+            this.severLabel.Text = "Enter your username";
+            // 
+            // clientLabel
+            // 
+            this.clientLabel.AutoSize = true;
+            this.clientLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.clientLabel.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clientLabel.Location = new System.Drawing.Point(1366, 370);
+            this.clientLabel.Name = "clientLabel";
+            this.clientLabel.Size = new System.Drawing.Size(214, 29);
+            this.clientLabel.TabIndex = 13;
+            this.clientLabel.Text = "Enter your username";
+            // 
             // ServerScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Orange;
+            this.Controls.Add(this.clientLabel);
+            this.Controls.Add(this.severLabel);
+            this.Controls.Add(this.serverInput);
+            this.Controls.Add(this.clientInput);
             this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.createButton);
@@ -170,5 +216,9 @@
         private System.Windows.Forms.Button createButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label errorLabel;
+        private System.Windows.Forms.TextBox clientInput;
+        private System.Windows.Forms.TextBox serverInput;
+        private System.Windows.Forms.Label severLabel;
+        private System.Windows.Forms.Label clientLabel;
     }
 }
