@@ -71,7 +71,194 @@ namespace Scribble.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to soccer
+        ///basketball
+        ///tennis
+        ///baseball
+        ///golf
+        ///running
+        ///volleyball
+        ///badminton
+        ///swimming
+        ///boxing
+        ///ping pong
+        ///skiing
+        ///ice skating
+        ///roller skating
+        ///cricket
+        ///rugby
+        ///pool
+        ///darts
+        ///football
+        ///bowling
+        ///hockey
+        ///surfing
+        ///karate
+        ///horse racing
+        ///snowboarding
+        ///skateboarding
+        ///cycling
+        ///archery
+        ///fishing
+        ///gymnastics
+        ///figure skating
+        ///rock climbing
+        ///fencing
+        ///water skiing
+        ///jet skiing
+        ///weight lifting
+        ///sky diving
+        ///lacrosse
+        ///wrestling
+        ///squash
+        ///handball
+        ///sailing
+        ///triathlon
+        ///ultimate frisbee
+        ///hiking
+        ///cross-country skiing
+        ///snowmobiling
+        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ActionFile {
+            get {
+                return ResourceManager.GetString("ActionFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cat
+        ///Cow
+        ///Dog
+        ///Donkey
+        ///Goat
+        ///Guinea pig
+        ///Horse
+        ///Pig
+        ///Rabbit
+        ///Chicken
+        ///Duck
+        ///Alligator
+        ///Alpaca
+        ///Ant
+        ///Anteater
+        ///Antelope
+        ///Ape
+        ///Baboon
+        ///Bat
+        ///Bear
+        ///Beaver
+        ///Bee
+        ///Bird
+        ///jellyfish
+        ///Bug
+        ///Caterpillar
+        ///Catfish
+        ///Cattle
+        ///Chameleon
+        ///Cheetah
+        ///Chimpanzee
+        ///Chipmunk
+        ///Clam
+        ///Clownfish
+        ///Cobra
+        ///Cockroach
+        ///Crab
+        ///Cricket
+        ///Crow
+        ///Deer
+        ///Dinosaur
+        ///Dolphin
+        ///Donkey
+        ///Dragon
+        ///Duck
+        ///worm
+        ///Eel
+        ///Elephant
+        ///Falcon
+        ///Firefly
+        ///Fish
+        ///Flamingo
+        ///Flying fish
+        ///Fox
+        ///Frog
+        ///Gecko
+        ///Giraffe
+        ///Goat
+        ///Goldfish
+        ///Gopher
+        ///Gorilla
+        ///Grasshopper
+        ///Guinea pig
+        ///Hammer [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string AnimalFile {
+            get {
+                return ResourceManager.GetString("AnimalFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to aroma
+        ///apple
+        ///avocado
+        ///apple pie
+        ///bagel
+        ///batter
+        ///beans
+        ///beer
+        ///biscuit
+        ///bread
+        ///broth
+        ///burger
+        ///burrito
+        ///butter
+        ///cake
+        ///candy
+        ///caramel
+        ///caviar
+        ///cheese
+        ///chili
+        ///chimichanga
+        ///chocolate
+        ///cider
+        ///cobbler
+        ///cocoa
+        ///coffee
+        ///cookie
+        ///cream
+        ///croissant
+        ///crumble
+        ///cuisine
+        ///curd
+        ///cookie
+        ///dessert
+        ///dish
+        ///drink
+        ///donut
+        ///dragonfruit
+        ///eggs
+        ///empanada
+        ///enchilada
+        ///entree
+        ///eclair
+        ///filet
+        ///fish
+        ///flour
+        ///foie gras
+        ///food
+        ///fajitas
+        ///falafel
+        ///fudge
+        ///french onion soup
+        ///glaze
+        ///grill
+        ///garnish
+        ///grilled cheese
+        ///gnocci
+        ///ghost pepper
+        ///grapes
+        ///grapefrui [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string FoodFile {
             get {
@@ -111,7 +298,109 @@ namespace Scribble.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Fast and Furious
+        ///Avatar
+        ///Spiderman
+        ///batman
+        ///Percy Jackson
+        ///Indiana Jones
+        ///Back to the future
+        ///The Incredibles
+        ///Transformers
+        ///Despicable Me
+        ///The Lord of the Rings
+        ///Wednesday
+        ///Groot
+        ///Avengers
+        ///Marvel
+        ///The Matrix
+        ///The Dark Knight Rises
+        ///Star Trek
+        ///Star Wars
+        ///Harry Potter
+        ///Voldemort
+        ///Gollum
+        ///Xmen
+        ///ET
+        ///Ace ventura
+        ///The Terminator
+        ///The hunger games
+        ///Katniss Everdeen
+        ///Luke Skywalker
+        ///Captain America
+        ///Ferris Bueller
+        ///Yoda
+        ///Rocky
+        ///Forrest Gump
+        ///Doc Brown
+        ///Loki
+        ///Superman
+        ///The Pirates of the Caribbean
+        ///Marty McFly
+        ///D [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string MovieFile {
+            get {
+                return ResourceManager.GetString("MovieFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to bus
+        ///lamborghini
+        ///bicycle
+        ///wallet
+        ///pencil and eraser
+        ///helmet
+        ///washing machine
+        ///computer
+        ///sweater
+        ///toothbrush
+        ///arm
+        ///ankle
+        ///arrow
+        ///atm
+        ///acid
+        ///alphabet
+        ///bleach
+        ///baby oil
+        ///boat
+        ///ball
+        ///belt
+        ///binoculars
+        ///bluetooth
+        ///battery
+        ///castle
+        ///clock
+        ///cable
+        ///clippers
+        ///phone
+        ///camera
+        ///clothes
+        ///casino
+        ///dishwasher
+        ///dogleg
+        ///diesel
+        ///diamond
+        ///dining table
+        ///diaper
+        ///dipole
+        ///deoderant
+        ///expressway
+        ///enchilada
+        ///ear
+        ///esophagus
+        ///earth
+        ///electricity
+        ///fire pit
+        ///fly swatter
+        ///foot locker
+        ///fishbowl
+        ///fireplace
+        ///finger
+        ///fire alarm
+        ///golfcart
+        ///golf c [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ObjectFile {
             get {
@@ -141,7 +430,42 @@ namespace Scribble.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Miley Cyrus
+        ///Kim Kardashian
+        ///Kayne West
+        ///Margaret Thatcher
+        ///George Washington
+        ///Ghandi
+        ///Nelson Mandela
+        ///Christopher Columbus
+        ///Justin Beiber
+        ///Lady Gaga
+        ///Katy Perry
+        ///Justin Timberlake
+        ///Jay Leno
+        ///David Letterman
+        ///Elle McPherson
+        ///Jennifer Aniston
+        ///Donald Duck
+        ///Goofy
+        ///Johnny Depp
+        ///Brittney Spears
+        ///Paris Hilton
+        ///Hugh Jackman
+        ///Vladimir Putin
+        ///Daniel Radcliffe
+        ///David Beckham
+        ///Madonna
+        ///Eminem
+        ///Matt Damon
+        ///Serena Williams
+        ///Brad Pitt
+        ///Mickey Mouse
+        ///Simon Cowell
+        ///Beethoven
+        ///Queen Elizabeth II
+        ///Albert Einstein
+        ///Bill Gate [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string PeopleFile {
             get {
@@ -150,11 +474,106 @@ namespace Scribble.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to statue of liberty
+        ///eiffel tower
+        ///big ben
+        ///leaning tower of pisa
+        ///colosseum
+        ///golden gate bridge
+        ///london eye
+        ///great wall of china
+        ///sydney opera house
+        ///stonehenge
+        ///pyramids of giza
+        ///taj mahal
+        ///mount everest
+        ///white house
+        ///cn tower
+        ///grand canyon
+        ///niagara falls
+        ///burj khalifa
+        ///mount rushmore
+        ///new york
+        ///toronto
+        ///dubai
+        ///amsterdam
+        ///alcatraz
+        ///hollywood
+        ///world trade center
+        ///disneyland
+        ///volcano
+        ///desert
+        ///swamp
+        ///paris
+        ///hong kong
+        ///rome
+        ///tokyo
+        ///qatar
+        ///las vegas
+        ///montreal
+        ///chicago
+        ///boston
+        ///dallas.
         /// </summary>
         internal static string PlaceFile {
             get {
                 return ResourceManager.GetString("PlaceFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to soccer
+        ///basketball
+        ///tennis
+        ///baseball
+        ///golf
+        ///running
+        ///volleyball
+        ///badminton
+        ///swimming
+        ///boxing
+        ///ping pong
+        ///skiing
+        ///ice skating
+        ///roller skating
+        ///cricket
+        ///rugby
+        ///pool
+        ///darts
+        ///football
+        ///bowling
+        ///hockey
+        ///surfing
+        ///karate
+        ///horse racing
+        ///snowboarding
+        ///skateboarding
+        ///cycling
+        ///archery
+        ///fishing
+        ///gymnastics
+        ///figure skating
+        ///rock climbing
+        ///fencing
+        ///water skiing
+        ///jet skiing
+        ///weight lifting
+        ///sky diving
+        ///lacrosse
+        ///wrestling
+        ///squash
+        ///handball
+        ///sailing
+        ///triathlon
+        ///ultimate frisbee
+        ///hiking
+        ///cross-country skiing
+        ///snowmobiling
+        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string RandomFile {
+            get {
+                return ResourceManager.GetString("RandomFile", resourceCulture);
             }
         }
         

@@ -1,0 +1,74 @@
+soccer
+basketball
+tennis
+baseball
+golf
+running
+volleyball
+badminton
+swimming
+boxing
+ping pong
+skiing
+ice skating
+roller skating
+cricket
+rugby
+pool
+darts
+football
+bowling
+hockey
+surfing
+karate
+horse racing
+snowboarding
+skateboarding
+cycling
+archery
+fishing
+gymnastics
+figure skating
+rock climbing
+fencing
+water skiing
+jet skiing
+weight lifting
+sky diving
+lacrosse
+wrestling
+squash
+handball
+sailing
+triathlon
+ultimate frisbee
+hiking
+cross-country skiing
+snowmobiling
+curling
+parkour
+bobsledding
+motocross
+dancing
+gardening
+skipping rope
+walking
+eating
+jumping
+bowling
+dodgeball
+marathon
+frisbee
+cornhole
+paintball
+rock climbing
+tubing
+Laugh
+smile
+cry
+Cooking
+drink
+cleaning
+wash
+crawling
+painting

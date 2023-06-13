@@ -154,4 +154,16 @@
   <data name="PlaceFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PlaceFile.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="ActionFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ActionFile.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="AnimalFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AnimalFile.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="MovieFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MovieFile.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="RandomFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RandomFile.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
 </root>

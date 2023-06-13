@@ -44,6 +44,10 @@
             this.orangeLabel = new System.Windows.Forms.Label();
             this.pencilLabel = new System.Windows.Forms.PictureBox();
             this.eraserLabel = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pencilLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eraserLabel)).BeginInit();
             this.SuspendLayout();
@@ -204,12 +208,65 @@
             this.eraserLabel.TabIndex = 17;
             this.eraserLabel.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.OrangeRed;
+            this.label1.Enabled = false;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(529, 320);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(804, 103);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Choose a Word";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Enabled = false;
+            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(533, 500);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(178, 83);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Word 1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.Enabled = false;
+            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(840, 500);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(178, 83);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "word 2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
+            // 
+            // button3
+            // 
+            this.button3.Enabled = false;
+            this.button3.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(1155, 500);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(178, 83);
+            this.button3.TabIndex = 21;
+            this.button3.Text = "word 3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
+            // 
             // GameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Orange;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.eraserLabel);
             this.Controls.Add(this.pencilLabel);
             this.Controls.Add(this.orangeLabel);
@@ -253,5 +310,9 @@
         private System.Windows.Forms.Label orangeLabel;
         private System.Windows.Forms.PictureBox pencilLabel;
         private System.Windows.Forms.PictureBox eraserLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

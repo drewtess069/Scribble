@@ -13,9 +13,8 @@ namespace Scribble
     public partial class ModeScreen : UserControl
     {
         public static String mode;
-        List<String> modes = new List<String> { "Food", "People", "Place", "Object", "Animal", "Phrase", "Action" };
         List<Button> buttons;
-        Random randMode = new Random();
+
         public ModeScreen()
         {
             InitializeComponent();
@@ -30,7 +29,7 @@ namespace Scribble
 
         private void foodButton_Click(object sender, EventArgs e)
         {
-            mode = modes[0];
+            mode = "food";
             DisplaySelection(mode);
             DisableButton(foodButton);
             
@@ -38,42 +37,42 @@ namespace Scribble
 
         private void peopleButton_Click(object sender, EventArgs e)
         {
-            mode = modes[1];
+            mode = "people";
             DisplaySelection(mode);
             DisableButton(peopleButton);
         }
 
         private void placeButton_Click(object sender, EventArgs e)
         {
-            mode = modes[2];
+            mode = "places";
             DisplaySelection(mode);
             DisableButton(placeButton);
         }
 
         private void animalButton_Click(object sender, EventArgs e)
         {
-            mode = modes[4];
+            mode = "animals";
             DisplaySelection(mode);
             DisableButton(animalButton);
         }
 
         private void phrasesButton_Click(object sender, EventArgs e)
         {
-            mode = modes[5];
+            mode = "movies";
             DisplaySelection(mode);
             DisableButton(phrasesButton);
         }
 
         private void actionsButton_Click(object sender, EventArgs e)
         {
-            mode = modes[6];
+            mode = "actions";
             DisplaySelection(mode);
             DisableButton(actionsButton);
         }
 
         private void randomButton_Click(object sender, EventArgs e)
         {
-            mode = modes[randMode.Next(0, modes.Count - 1)];
+            mode = "random";
             DisplaySelection(mode);
             DisableButton(randomButton);
         }
@@ -81,7 +80,7 @@ namespace Scribble
 
         private void objectButton_Click(object sender, EventArgs e)
         {
-            mode = modes[3];
+            mode = "objects";
             DisplaySelection(mode);
             DisableButton(objectButton);
 

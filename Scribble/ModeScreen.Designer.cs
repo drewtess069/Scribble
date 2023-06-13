@@ -209,14 +209,14 @@
             // 
             // selectionLabel
             // 
-            this.selectionLabel.AutoSize = true;
             this.selectionLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.selectionLabel.ForeColor = System.Drawing.Color.Red;
-            this.selectionLabel.Location = new System.Drawing.Point(865, 301);
+            this.selectionLabel.Location = new System.Drawing.Point(797, 302);
             this.selectionLabel.Name = "selectionLabel";
-            this.selectionLabel.Size = new System.Drawing.Size(65, 26);
+            this.selectionLabel.Size = new System.Drawing.Size(298, 26);
             this.selectionLabel.TabIndex = 12;
             this.selectionLabel.Text = "label2";
+            this.selectionLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.selectionLabel.Visible = false;
             // 
             // ModeScreen
@@ -238,7 +238,6 @@
             this.Name = "ModeScreen";
             this.Size = new System.Drawing.Size(1920, 1080);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
