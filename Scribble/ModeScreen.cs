@@ -94,12 +94,14 @@ namespace Scribble
         private void DisableButton(Button button)
         {
             button.Enabled = false;
+            button.BackColor = Color.Green;
 
             foreach (Button buts in buttons)
             {
                 if (buts != button)
                 {
                     buts.Enabled = true;
+                    buts.BackColor = Color.FromArgb(255, 192, 128);
                 }
             }
         }

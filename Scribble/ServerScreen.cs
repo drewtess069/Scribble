@@ -16,6 +16,8 @@ namespace Scribble
     public partial class ServerScreen : UserControl
     {
         Network internet = new Network(Form1.ip);
+        public static string clientname;
+        public static string servername;
         
         public ServerScreen()
         {
@@ -25,28 +27,41 @@ namespace Scribble
         private void createButton_Click(object sender, EventArgs e)
         {
             //internet.ServerSide();
-           
 
+            servername = serverInput.Text;
             Form1.ChangeScreen(this, new ModeScreen());
         }
 
         private void joinButton_Click(object sender, EventArgs e)
         {
-            
-            if (internet.ClientSide() == 0)
+
+            //if (internet.ClientSide() == 0)
+            //{
+
+            //    errorLabel.Visible = true;
+
+            //}
+            //else
+            //{
+            //    errorLabel.Visible = true;
+            //    errorLabel.Text = "Connecting...";
+            //    Thread.Sleep(1000);
+
+            //}
+            if (clientInput.Text == "")
             {
-                
-                errorLabel.Visible = true;
+                joinButton.Text = "Enter Username";
                 
             }
             else
             {
-                errorLabel.Visible = true;
-                errorLabel.Text = "Connecting...";
-                Thread.Sleep(1000);
+                clientname = clientInput.Text;
                 Form1.ChangeScreen(this, new ModeScreen());
+
             }
             
+            
+
         }
 
     }
