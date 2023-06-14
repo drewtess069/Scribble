@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.playerLabel = new System.Windows.Forms.Label();
             this.guessesLabel = new System.Windows.Forms.Label();
             this.drawLabel = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@
             this.word2Button = new System.Windows.Forms.Button();
             this.word3Button = new System.Windows.Forms.Button();
             this.wordLabel = new System.Windows.Forms.Label();
+            this.gameTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pencilLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eraserLabel)).BeginInit();
             this.SuspendLayout();
@@ -271,6 +273,11 @@
             this.wordLabel.Text = "__ __ __ __";
             this.wordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // gameTimer
+            // 
+            this.gameTimer.Interval = 20;
+            this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
+            // 
             // GameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -298,6 +305,7 @@
             this.Controls.Add(this.drawLabel);
             this.Controls.Add(this.guessesLabel);
             this.Controls.Add(this.playerLabel);
+            this.DoubleBuffered = true;
             this.Name = "GameScreen";
             this.Size = new System.Drawing.Size(1920, 1080);
             ((System.ComponentModel.ISupportInitialize)(this.pencilLabel)).EndInit();
@@ -330,5 +338,6 @@
         private System.Windows.Forms.Button word2Button;
         private System.Windows.Forms.Button word3Button;
         private System.Windows.Forms.Label wordLabel;
+        private System.Windows.Forms.Timer gameTimer;
     }
 }

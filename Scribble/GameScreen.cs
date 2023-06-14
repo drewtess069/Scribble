@@ -18,6 +18,7 @@ namespace Scribble
         List<string> selectedWords= new List<string>();
         Random wordGen = new Random();
         string word;
+        string playerRole;
 
         public GameScreen()
         {
@@ -93,6 +94,11 @@ namespace Scribble
             {
                 wordLabel.Text += "__ ";
             }
+        }
+
+        private void gameTimer_Tick(object sender, EventArgs e)
+        {
+            if()
         }
     }
 }
