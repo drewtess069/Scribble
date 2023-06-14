@@ -71,6 +71,7 @@
       <DependentUpon>ModeScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Network.cs" />
+    <Compile Include="PLayer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerHub.cs">

@@ -44,10 +44,11 @@
             this.orangeLabel = new System.Windows.Forms.Label();
             this.pencilLabel = new System.Windows.Forms.PictureBox();
             this.eraserLabel = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.wordTitleLabel = new System.Windows.Forms.Label();
+            this.word1Button = new System.Windows.Forms.Button();
+            this.word2Button = new System.Windows.Forms.Button();
+            this.word3Button = new System.Windows.Forms.Button();
+            this.wordLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pencilLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eraserLabel)).BeginInit();
             this.SuspendLayout();
@@ -77,7 +78,7 @@
             this.drawLabel.BackColor = System.Drawing.Color.White;
             this.drawLabel.Location = new System.Drawing.Point(388, 108);
             this.drawLabel.Name = "drawLabel";
-            this.drawLabel.Size = new System.Drawing.Size(1095, 847);
+            this.drawLabel.Size = new System.Drawing.Size(1108, 847);
             this.drawLabel.TabIndex = 2;
             // 
             // guessInput
@@ -152,7 +153,7 @@
             // 
             this.blackLabel.BackColor = System.Drawing.Color.Black;
             this.blackLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.blackLabel.Location = new System.Drawing.Point(1155, 982);
+            this.blackLabel.Location = new System.Drawing.Point(1168, 982);
             this.blackLabel.Name = "blackLabel";
             this.blackLabel.Size = new System.Drawing.Size(75, 75);
             this.blackLabel.TabIndex = 10;
@@ -190,7 +191,7 @@
             this.pencilLabel.BackgroundImage = global::Scribble.Properties.Resources.image_processing20200423_22926_hjypki;
             this.pencilLabel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pencilLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pencilLabel.Location = new System.Drawing.Point(1280, 982);
+            this.pencilLabel.Location = new System.Drawing.Point(1299, 982);
             this.pencilLabel.Name = "pencilLabel";
             this.pencilLabel.Size = new System.Drawing.Size(75, 75);
             this.pencilLabel.TabIndex = 16;
@@ -202,60 +203,73 @@
             this.eraserLabel.BackgroundImage = global::Scribble.Properties.Resources._595_5956276_png_photo_pencil_eraser_color_clip_art_colour;
             this.eraserLabel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.eraserLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.eraserLabel.Location = new System.Drawing.Point(1408, 982);
+            this.eraserLabel.Location = new System.Drawing.Point(1421, 982);
             this.eraserLabel.Name = "eraserLabel";
             this.eraserLabel.Size = new System.Drawing.Size(75, 75);
             this.eraserLabel.TabIndex = 17;
             this.eraserLabel.TabStop = false;
             // 
-            // label1
+            // wordTitleLabel
             // 
-            this.label1.BackColor = System.Drawing.Color.OrangeRed;
-            this.label1.Enabled = false;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(529, 320);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(804, 103);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Choose a Word";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Visible = false;
+            this.wordTitleLabel.BackColor = System.Drawing.Color.OrangeRed;
+            this.wordTitleLabel.Enabled = false;
+            this.wordTitleLabel.Font = new System.Drawing.Font("Comic Sans MS", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wordTitleLabel.Location = new System.Drawing.Point(529, 320);
+            this.wordTitleLabel.Name = "wordTitleLabel";
+            this.wordTitleLabel.Size = new System.Drawing.Size(804, 103);
+            this.wordTitleLabel.TabIndex = 18;
+            this.wordTitleLabel.Text = "Choose a Word";
+            this.wordTitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.wordTitleLabel.Visible = false;
             // 
-            // button1
+            // word1Button
             // 
-            this.button1.Enabled = false;
-            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(533, 500);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(178, 83);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Word 1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
+            this.word1Button.Enabled = false;
+            this.word1Button.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.word1Button.Location = new System.Drawing.Point(533, 500);
+            this.word1Button.Name = "word1Button";
+            this.word1Button.Size = new System.Drawing.Size(178, 83);
+            this.word1Button.TabIndex = 19;
+            this.word1Button.Text = "Word 1";
+            this.word1Button.UseVisualStyleBackColor = true;
+            this.word1Button.Visible = false;
+            this.word1Button.Click += new System.EventHandler(this.word1Button_Click);
             // 
-            // button2
+            // word2Button
             // 
-            this.button2.Enabled = false;
-            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(840, 500);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(178, 83);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "word 2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
+            this.word2Button.Enabled = false;
+            this.word2Button.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.word2Button.Location = new System.Drawing.Point(840, 500);
+            this.word2Button.Name = "word2Button";
+            this.word2Button.Size = new System.Drawing.Size(178, 83);
+            this.word2Button.TabIndex = 20;
+            this.word2Button.Text = "word 2";
+            this.word2Button.UseVisualStyleBackColor = true;
+            this.word2Button.Visible = false;
+            this.word2Button.Click += new System.EventHandler(this.word2Button_Click);
             // 
-            // button3
+            // word3Button
             // 
-            this.button3.Enabled = false;
-            this.button3.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(1155, 500);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(178, 83);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "word 3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Visible = false;
+            this.word3Button.Enabled = false;
+            this.word3Button.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.word3Button.Location = new System.Drawing.Point(1155, 500);
+            this.word3Button.Name = "word3Button";
+            this.word3Button.Size = new System.Drawing.Size(178, 83);
+            this.word3Button.TabIndex = 21;
+            this.word3Button.Text = "word 3";
+            this.word3Button.UseVisualStyleBackColor = true;
+            this.word3Button.Visible = false;
+            this.word3Button.Click += new System.EventHandler(this.word3Button_Click);
+            // 
+            // wordLabel
+            // 
+            this.wordLabel.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wordLabel.Location = new System.Drawing.Point(388, 44);
+            this.wordLabel.Name = "wordLabel";
+            this.wordLabel.Size = new System.Drawing.Size(1108, 52);
+            this.wordLabel.TabIndex = 22;
+            this.wordLabel.Text = "__ __ __ __";
+            this.wordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // GameScreen
             // 
@@ -263,10 +277,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Orange;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.wordLabel);
+            this.Controls.Add(this.word3Button);
+            this.Controls.Add(this.word2Button);
+            this.Controls.Add(this.word1Button);
+            this.Controls.Add(this.wordTitleLabel);
             this.Controls.Add(this.eraserLabel);
             this.Controls.Add(this.pencilLabel);
             this.Controls.Add(this.orangeLabel);
@@ -310,9 +325,10 @@
         private System.Windows.Forms.Label orangeLabel;
         private System.Windows.Forms.PictureBox pencilLabel;
         private System.Windows.Forms.PictureBox eraserLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label wordTitleLabel;
+        private System.Windows.Forms.Button word1Button;
+        private System.Windows.Forms.Button word2Button;
+        private System.Windows.Forms.Button word3Button;
+        private System.Windows.Forms.Label wordLabel;
     }
 }
