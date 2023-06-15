@@ -82,6 +82,9 @@
             this.drawLabel.Name = "drawLabel";
             this.drawLabel.Size = new System.Drawing.Size(1108, 814);
             this.drawLabel.TabIndex = 2;
+            this.drawLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.drawLabel_MouseDown);
+            this.drawLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.drawLabel_MouseMove);
+            this.drawLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.drawLabel_MouseUp);
             // 
             // guessInput
             // 
