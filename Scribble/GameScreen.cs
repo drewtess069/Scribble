@@ -23,12 +23,21 @@ namespace Scribble
         List<string> role = new List<string>();
         int round = 0;
         int gameCount;
+        bool mouseDown;
+        bool paintingEnabled;
+        Graphics g;
+        int? initx = null;
+        int? inity = null;
+
         int timerTick;
         int roundTime = 60;
+
 
         public GameScreen()
         {
             InitializeComponent();
+            WordSelect();
+            g = drawLabel.CreateGraphics();
             NewRound();
             gameState = "roundStart";
         }
@@ -98,6 +107,7 @@ namespace Scribble
             word = word1Button.Text;
             DisableButtons();
             DisplayWord();
+            paintingEnabled = true;
         }
 
         private void word2Button_Click(object sender, EventArgs e)
@@ -105,6 +115,7 @@ namespace Scribble
             word = word2Button.Text;
             DisableButtons();
             DisplayWord();
+            paintingEnabled = true;
         }
 
         private void word3Button_Click(object sender, EventArgs e)
@@ -112,6 +123,7 @@ namespace Scribble
             word = word3Button.Text;
             DisableButtons();
             DisplayWord();
+            paintingEnabled = true;
         }
 
         public void DisableButtons()
@@ -162,6 +174,37 @@ namespace Scribble
             {
 
             }
+        }
+
+        private void drawLabel_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (paintingEnabled)
+            {
+                mouseDown = true;
+            }
+        }
+
+        private void drawLabel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                Pen p = new Pen(Color.Black);
+                g.DrawLine(p, new Point(initx ?? e.X, inity ?? e.Y), new Point(e.X, e.Y));
+                initx = e.X;
+                inity = e.Y;
+               
+
+
+            }
+            
+
+        }
+
+        private void drawLabel_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+            initx = null;
+            inity = null;
         }
     }
 }

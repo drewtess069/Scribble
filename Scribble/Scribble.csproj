@@ -194,5 +194,14 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Resources\ActionFile.txt" />
+    <Content Include="bin\Debug\Resources\FoodFile.txt" />
+    <Content Include="bin\Debug\Resources\MovieFile.txt" />
+    <Content Include="bin\Debug\Resources\ObjectFile.txt" />
+    <Content Include="bin\Debug\Resources\PeopleFile.txt" />
+    <Content Include="bin\Debug\Resources\PlaceFile.txt" />
+    <Content Include="bin\Debug\Resources\RandomFile.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
