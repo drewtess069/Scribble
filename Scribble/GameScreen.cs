@@ -29,7 +29,7 @@ namespace Scribble
         public GameScreen()
         {
             InitializeComponent();
-            WordSelect();
+            NewRound();
             gameState = "roundStart";
         }
 
@@ -46,7 +46,10 @@ namespace Scribble
                 {
                     role[i] = "painter";
                 }
-                //else()
+                else
+                {
+                    role[i] = "player";
+                }
             }
         }
 
@@ -61,21 +64,33 @@ namespace Scribble
                 selectedWords.Add(randomWord.ToLower());
             }
 
-            word1Button.Text = selectedWords[0];
-            word2Button.Text = selectedWords[1];
-            word3Button.Text = selectedWords[2];
+            for (int i = 0; i < role.Count; i++)
+            {
+                wordTitleLabel.Visible = true;
 
-            word1Button.Enabled = true;
-            word2Button.Enabled = true;
-            word3Button.Enabled = true;
+                if (role[i] == "painter")
+                {
+                    wordTitleLabel.Text = "Please Select a Word.";
 
-            word1Button.Visible = true;
-            word2Button.Visible = true;
-            word3Button.Visible = true;
+                    word1Button.Text = selectedWords[0];
+                    word2Button.Text = selectedWords[1];
+                    word3Button.Text = selectedWords[2];
 
-            wordTitleLabel.Visible = true;
+                    word1Button.Enabled = true;
+                    word2Button.Enabled = true;
+                    word3Button.Enabled = true;
 
-            Refresh();
+                    word1Button.Visible = true;
+                    word2Button.Visible = true;
+                    word3Button.Visible = true;
+
+                    Refresh();
+                }
+                else
+                {
+                    wordTitleLabel.Text = "Waiting for painter.";
+                }
+            }
         }
 
         private void word1Button_Click(object sender, EventArgs e)
@@ -131,17 +146,21 @@ namespace Scribble
         private void gameTimer_Tick(object sender, EventArgs e)
         {
             timerTick++;
-
-            if(timerTick != 0 && timerTick %50 == 0)
+            if (timerTick != 0 && timerTick % 50 == 0)
             {
                 roundTime--;
                 timeLabel.Text = roundTime.ToString();
             }
 
-            if(roundTime == 0)
+            if (roundTime == 0)
             {
                 gameTimer.Stop();
                 round++;
+            }
+
+            for (int i = 0; i < role.Count; i++)
+            {
+
             }
         }
     }
