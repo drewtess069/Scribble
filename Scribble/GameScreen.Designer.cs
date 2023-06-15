@@ -43,7 +43,6 @@
             this.greenLabel = new System.Windows.Forms.Label();
             this.yellowLabel = new System.Windows.Forms.Label();
             this.orangeLabel = new System.Windows.Forms.Label();
-            this.pencilLabel = new System.Windows.Forms.PictureBox();
             this.eraserLabel = new System.Windows.Forms.PictureBox();
             this.wordTitleLabel = new System.Windows.Forms.Label();
             this.word1Button = new System.Windows.Forms.Button();
@@ -51,7 +50,6 @@
             this.word3Button = new System.Windows.Forms.Button();
             this.wordLabel = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pencilLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eraserLabel)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,7 +138,7 @@
             // 
             this.blueLabel.BackColor = System.Drawing.Color.Blue;
             this.blueLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.blueLabel.Location = new System.Drawing.Point(893, 982);
+            this.blueLabel.Location = new System.Drawing.Point(982, 982);
             this.blueLabel.Name = "blueLabel";
             this.blueLabel.Size = new System.Drawing.Size(75, 75);
             this.blueLabel.TabIndex = 8;
@@ -149,7 +147,7 @@
             // 
             this.purpleLabel.BackColor = System.Drawing.Color.Purple;
             this.purpleLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.purpleLabel.Location = new System.Drawing.Point(1028, 982);
+            this.purpleLabel.Location = new System.Drawing.Point(1133, 982);
             this.purpleLabel.Name = "purpleLabel";
             this.purpleLabel.Size = new System.Drawing.Size(75, 75);
             this.purpleLabel.TabIndex = 9;
@@ -158,7 +156,7 @@
             // 
             this.blackLabel.BackColor = System.Drawing.Color.Black;
             this.blackLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.blackLabel.Location = new System.Drawing.Point(1168, 982);
+            this.blackLabel.Location = new System.Drawing.Point(1279, 982);
             this.blackLabel.Name = "blackLabel";
             this.blackLabel.Size = new System.Drawing.Size(75, 75);
             this.blackLabel.TabIndex = 10;
@@ -167,7 +165,7 @@
             // 
             this.greenLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.greenLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.greenLabel.Location = new System.Drawing.Point(767, 982);
+            this.greenLabel.Location = new System.Drawing.Point(835, 982);
             this.greenLabel.Name = "greenLabel";
             this.greenLabel.Size = new System.Drawing.Size(75, 75);
             this.greenLabel.TabIndex = 13;
@@ -176,7 +174,7 @@
             // 
             this.yellowLabel.BackColor = System.Drawing.Color.Yellow;
             this.yellowLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.yellowLabel.Location = new System.Drawing.Point(636, 982);
+            this.yellowLabel.Location = new System.Drawing.Point(688, 982);
             this.yellowLabel.Name = "yellowLabel";
             this.yellowLabel.Size = new System.Drawing.Size(75, 75);
             this.yellowLabel.TabIndex = 14;
@@ -185,22 +183,10 @@
             // 
             this.orangeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.orangeLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.orangeLabel.Location = new System.Drawing.Point(509, 982);
+            this.orangeLabel.Location = new System.Drawing.Point(533, 982);
             this.orangeLabel.Name = "orangeLabel";
             this.orangeLabel.Size = new System.Drawing.Size(75, 75);
             this.orangeLabel.TabIndex = 15;
-            // 
-            // pencilLabel
-            // 
-            this.pencilLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pencilLabel.BackgroundImage = global::Scribble.Properties.Resources.image_processing20200423_22926_hjypki;
-            this.pencilLabel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pencilLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pencilLabel.Location = new System.Drawing.Point(1299, 982);
-            this.pencilLabel.Name = "pencilLabel";
-            this.pencilLabel.Size = new System.Drawing.Size(75, 75);
-            this.pencilLabel.TabIndex = 16;
-            this.pencilLabel.TabStop = false;
             // 
             // eraserLabel
             // 
@@ -293,7 +279,6 @@
             this.Controls.Add(this.word1Button);
             this.Controls.Add(this.wordTitleLabel);
             this.Controls.Add(this.eraserLabel);
-            this.Controls.Add(this.pencilLabel);
             this.Controls.Add(this.orangeLabel);
             this.Controls.Add(this.yellowLabel);
             this.Controls.Add(this.greenLabel);
@@ -311,7 +296,6 @@
             this.DoubleBuffered = true;
             this.Name = "GameScreen";
             this.Size = new System.Drawing.Size(1920, 1080);
-            ((System.ComponentModel.ISupportInitialize)(this.pencilLabel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eraserLabel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -334,7 +318,6 @@
         private System.Windows.Forms.Label greenLabel;
         private System.Windows.Forms.Label yellowLabel;
         private System.Windows.Forms.Label orangeLabel;
-        private System.Windows.Forms.PictureBox pencilLabel;
         private System.Windows.Forms.PictureBox eraserLabel;
         private System.Windows.Forms.Label wordTitleLabel;
         private System.Windows.Forms.Button word1Button;

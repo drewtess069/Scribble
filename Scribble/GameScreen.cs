@@ -20,8 +20,8 @@ namespace Scribble
         Random wordGen = new Random();
         string word;
         string gameState;
-        string role;
-        int roundCount;
+        List<string> role = new List<string>();
+        int round = 0;
         int gameCount;
         bool mouseDown;
         bool paintingEnabled;
@@ -29,17 +29,37 @@ namespace Scribble
         int? initx = null;
         int? inity = null;
 
+        int timerTick;
+        int roundTime = 60;
+
+
         public GameScreen()
         {
             InitializeComponent();
             WordSelect();
             g = drawLabel.CreateGraphics();
+            NewRound();
             gameState = "roundStart";
         }
 
         public void NewRound()
         {
+            timerTick= 0;
+            selectedWords.Clear();
+            wordList.Clear();
+            roundTime = 60;
 
+            for(int i = 0; i <ServerHub.players.Count; i++)
+            {
+                if(i == round)
+                {
+                    role[i] = "painter";
+                }
+                else
+                {
+                    role[i] = "player";
+                }
+            }
         }
 
         public void WordSelect()
@@ -53,21 +73,33 @@ namespace Scribble
                 selectedWords.Add(randomWord.ToLower());
             }
 
-            word1Button.Text = selectedWords[0];
-            word2Button.Text = selectedWords[1];
-            word3Button.Text = selectedWords[2];
+            for (int i = 0; i < role.Count; i++)
+            {
+                wordTitleLabel.Visible = true;
 
-            word1Button.Enabled = true;
-            word2Button.Enabled = true;
-            word3Button.Enabled = true;
+                if (role[i] == "painter")
+                {
+                    wordTitleLabel.Text = "Please Select a Word.";
 
-            word1Button.Visible = true;
-            word2Button.Visible = true;
-            word3Button.Visible = true;
+                    word1Button.Text = selectedWords[0];
+                    word2Button.Text = selectedWords[1];
+                    word3Button.Text = selectedWords[2];
 
-            wordTitleLabel.Visible = true;
+                    word1Button.Enabled = true;
+                    word2Button.Enabled = true;
+                    word3Button.Enabled = true;
 
-            Refresh();
+                    word1Button.Visible = true;
+                    word2Button.Visible = true;
+                    word3Button.Visible = true;
+
+                    Refresh();
+                }
+                else
+                {
+                    wordTitleLabel.Text = "Waiting for painter.";
+                }
+            }
         }
 
         private void word1Button_Click(object sender, EventArgs e)
@@ -125,7 +157,23 @@ namespace Scribble
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
+            timerTick++;
+            if (timerTick != 0 && timerTick % 50 == 0)
+            {
+                roundTime--;
+                timeLabel.Text = roundTime.ToString();
+            }
 
+            if (roundTime == 0)
+            {
+                gameTimer.Stop();
+                round++;
+            }
+
+            for (int i = 0; i < role.Count; i++)
+            {
+
+            }
         }
 
         private void drawLabel_MouseDown(object sender, MouseEventArgs e)
