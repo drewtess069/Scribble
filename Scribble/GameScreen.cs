@@ -9,21 +9,26 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Threading;
+using System.Windows.Forms.VisualStyles;
 
 namespace Scribble
 {
     public partial class GameScreen : UserControl
     {
-        List<string> wordList= new List<string>();
-        List<string> selectedWords= new List<string>();
+        List<string> wordList = new List<string>();
+        List<string> selectedWords = new List<string>();
         Random wordGen = new Random();
         string word;
-        string playerRole;
+        string gameState;
+        string role;
+        int roundCount;
+        int gameCount;
 
         public GameScreen()
         {
             InitializeComponent();
-
+            WordSelect();
+            gameState = "roundStart";
         }
 
         public void NewRound()
@@ -33,12 +38,13 @@ namespace Scribble
 
         public void WordSelect()
         {
-           wordList = File.ReadAllLines($"{ModeScreen.mode}.txt").ToList();
+            wordList = File.ReadAllLines($"{ModeScreen.mode}File.txt").ToList();
 
-            for(int i = 0; i < 3; i++)
+            for (int i = 0; i < 3; i++)
             {
                 int index = wordGen.Next(0, wordList.Count);
-                selectedWords[i] = wordList[index];
+                string randomWord = wordList[index];
+                selectedWords.Add(randomWord.ToLower());
             }
 
             word1Button.Text = selectedWords[0];
@@ -49,7 +55,7 @@ namespace Scribble
             word2Button.Enabled = true;
             word3Button.Enabled = true;
 
-            word1Button.Visible= true;
+            word1Button.Visible = true;
             word2Button.Visible = true;
             word3Button.Visible = true;
 
@@ -62,18 +68,21 @@ namespace Scribble
         {
             word = word1Button.Text;
             DisableButtons();
+            DisplayWord();
         }
 
         private void word2Button_Click(object sender, EventArgs e)
         {
             word = word2Button.Text;
             DisableButtons();
+            DisplayWord();
         }
 
         private void word3Button_Click(object sender, EventArgs e)
         {
             word = word3Button.Text;
             DisableButtons();
+            DisplayWord();
         }
 
         public void DisableButtons()
@@ -90,15 +99,24 @@ namespace Scribble
 
         public void DisplayWord()
         {
+            wordLabel.Text = "";
+
             for (int i = 0; i < word.Length; i++)
             {
-                wordLabel.Text += "__ ";
+                if (word[i] == ' ')
+                {
+                    wordLabel.Text += "   ";
+                }
+                else
+                {
+                    wordLabel.Text += "_ ";
+                }
             }
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-            if()
+
         }
     }
 }

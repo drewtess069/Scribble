@@ -43,7 +43,7 @@ sailing
 triathlon
 ultimate frisbee
 hiking
-cross-country skiing
+crosscountry skiing
 snowmobiling
 curling
 parkour

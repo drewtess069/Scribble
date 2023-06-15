@@ -29,7 +29,7 @@ namespace Scribble
 
         private void foodButton_Click(object sender, EventArgs e)
         {
-            mode = "food";
+            mode = "Food";
             DisplaySelection(mode);
             DisableButton(foodButton);
             
@@ -37,42 +37,42 @@ namespace Scribble
 
         private void peopleButton_Click(object sender, EventArgs e)
         {
-            mode = "people";
+            mode = "People";
             DisplaySelection(mode);
             DisableButton(peopleButton);
         }
 
         private void placeButton_Click(object sender, EventArgs e)
         {
-            mode = "place";
+            mode = "Place";
             DisplaySelection(mode);
             DisableButton(placeButton);
         }
 
         private void animalButton_Click(object sender, EventArgs e)
         {
-            mode = "animal";
+            mode = "Animal";
             DisplaySelection(mode);
             DisableButton(animalButton);
         }
 
         private void phrasesButton_Click(object sender, EventArgs e)
         {
-            mode = "movie";
+            mode = "Movie";
             DisplaySelection(mode);
             DisableButton(phrasesButton);
         }
 
         private void actionsButton_Click(object sender, EventArgs e)
         {
-            mode = "action";
+            mode = "Action";
             DisplaySelection(mode);
             DisableButton(actionsButton);
         }
 
         private void randomButton_Click(object sender, EventArgs e)
         {
-            mode = "random";
+            mode = "Random";
             DisplaySelection(mode);
             DisableButton(randomButton);
         }
@@ -80,7 +80,7 @@ namespace Scribble
 
         private void objectButton_Click(object sender, EventArgs e)
         {
-            mode = "object";
+            mode = "Object";
             DisplaySelection(mode);
             DisableButton(objectButton);
 

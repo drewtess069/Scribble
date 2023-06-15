@@ -12,6 +12,7 @@ namespace Scribble
 {
     public partial class ServerHub : UserControl
     {
+        public static List<Player> players = new List<Player>();
         public ServerHub()
         {
             InitializeComponent();

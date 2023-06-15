@@ -78,9 +78,9 @@
             // drawLabel
             // 
             this.drawLabel.BackColor = System.Drawing.Color.White;
-            this.drawLabel.Location = new System.Drawing.Point(388, 108);
+            this.drawLabel.Location = new System.Drawing.Point(388, 141);
             this.drawLabel.Name = "drawLabel";
-            this.drawLabel.Size = new System.Drawing.Size(1108, 847);
+            this.drawLabel.Size = new System.Drawing.Size(1108, 814);
             this.drawLabel.TabIndex = 2;
             // 
             // guessInput
@@ -230,7 +230,7 @@
             this.word1Button.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.word1Button.Location = new System.Drawing.Point(533, 500);
             this.word1Button.Name = "word1Button";
-            this.word1Button.Size = new System.Drawing.Size(178, 83);
+            this.word1Button.Size = new System.Drawing.Size(264, 331);
             this.word1Button.TabIndex = 19;
             this.word1Button.Text = "Word 1";
             this.word1Button.UseVisualStyleBackColor = true;
@@ -241,9 +241,9 @@
             // 
             this.word2Button.Enabled = false;
             this.word2Button.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.word2Button.Location = new System.Drawing.Point(840, 500);
+            this.word2Button.Location = new System.Drawing.Point(823, 500);
             this.word2Button.Name = "word2Button";
-            this.word2Button.Size = new System.Drawing.Size(178, 83);
+            this.word2Button.Size = new System.Drawing.Size(249, 331);
             this.word2Button.TabIndex = 20;
             this.word2Button.Text = "word 2";
             this.word2Button.UseVisualStyleBackColor = true;
@@ -254,9 +254,9 @@
             // 
             this.word3Button.Enabled = false;
             this.word3Button.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.word3Button.Location = new System.Drawing.Point(1155, 500);
+            this.word3Button.Location = new System.Drawing.Point(1095, 500);
             this.word3Button.Name = "word3Button";
-            this.word3Button.Size = new System.Drawing.Size(178, 83);
+            this.word3Button.Size = new System.Drawing.Size(238, 331);
             this.word3Button.TabIndex = 21;
             this.word3Button.Text = "word 3";
             this.word3Button.UseVisualStyleBackColor = true;
@@ -266,11 +266,11 @@
             // wordLabel
             // 
             this.wordLabel.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wordLabel.Location = new System.Drawing.Point(388, 44);
+            this.wordLabel.ForeColor = System.Drawing.Color.Black;
+            this.wordLabel.Location = new System.Drawing.Point(388, 18);
             this.wordLabel.Name = "wordLabel";
-            this.wordLabel.Size = new System.Drawing.Size(1108, 52);
+            this.wordLabel.Size = new System.Drawing.Size(1108, 109);
             this.wordLabel.TabIndex = 22;
-            this.wordLabel.Text = "__ __ __ __";
             this.wordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gameTimer
