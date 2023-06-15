@@ -20,9 +20,11 @@ namespace Scribble
         Random wordGen = new Random();
         string word;
         string gameState;
-        string role;
-        int roundCount;
+        List<string> role = new List<string>();
+        int round = 0;
         int gameCount;
+        int timerTick;
+        int roundTime = 60;
 
         public GameScreen()
         {
@@ -33,12 +35,24 @@ namespace Scribble
 
         public void NewRound()
         {
+            timerTick= 0;
+            selectedWords.Clear();
+            wordList.Clear();
+            roundTime = 60;
 
+            for(int i = 0; i <ServerHub.players.Count; i++)
+            {
+                if(i == round)
+                {
+                    role[i] = "painter";
+                }
+                //else()
+            }
         }
 
         public void WordSelect()
         {
-            wordList = File.ReadAllLines($"{ModeScreen.mode}File.txt").ToList();
+            wordList = File.ReadAllLines($"Resources\\{ModeScreen.mode}File.txt").ToList();
 
             for (int i = 0; i < 3; i++)
             {
@@ -116,7 +130,19 @@ namespace Scribble
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
+            timerTick++;
 
+            if(timerTick != 0 && timerTick %50 == 0)
+            {
+                roundTime--;
+                timeLabel.Text = roundTime.ToString();
+            }
+
+            if(roundTime == 0)
+            {
+                gameTimer.Stop();
+                round++;
+            }
         }
     }
 }

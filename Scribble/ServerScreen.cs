@@ -26,10 +26,15 @@ namespace Scribble
 
         private void createButton_Click(object sender, EventArgs e)
         {
-            //internet.ServerSide();
-
-            servername = serverInput.Text;
-            Form1.ChangeScreen(this, new ModeScreen());
+            if (serverInput.Text != "")
+            {
+                servername = serverInput.Text;
+                Form1.ChangeScreen(this, new ModeScreen());
+            }
+            else
+            {
+                createButton.Text = "Enter a username!";
+            }
         }
 
         private void joinButton_Click(object sender, EventArgs e)
