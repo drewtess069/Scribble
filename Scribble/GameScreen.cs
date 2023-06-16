@@ -194,12 +194,7 @@ namespace Scribble
                 g.DrawLine(drawPen, new Point(initx ?? e.X, inity ?? e.Y), new Point(e.X, e.Y));
                 initx = e.X;
                 inity = e.Y;
-
-
-
             }
-
-
         }
 
         private void drawLabel_MouseUp(object sender, MouseEventArgs e)
