@@ -91,6 +91,7 @@
             this.guessInput.Name = "guessInput";
             this.guessInput.Size = new System.Drawing.Size(344, 56);
             this.guessInput.TabIndex = 3;
+            this.guessInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guessInput_KeyDown);
             // 
             // label4
             // 

@@ -174,6 +174,7 @@ namespace Scribble
             {
 
             }
+            
         }
 
         private void drawLabel_MouseDown(object sender, MouseEventArgs e)
@@ -205,6 +206,14 @@ namespace Scribble
             mouseDown = false;
             initx = null;
             inity = null;
+        }
+
+        private void guessInput_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && guessInput.Text != null || guessInput.Text != "")
+            {
+                guessesLabel.Text = $"\n INSERT USERNAME HERE: {guessInput.Text}";
+            }
         }
     }
 }
