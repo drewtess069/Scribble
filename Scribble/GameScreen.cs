@@ -211,10 +211,12 @@ namespace Scribble
 
         private void guessInput_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter && guessInput.Text != null || guessInput.Text != "")
+            if (e.KeyCode == Keys.Enter && guessInput.Text != null && guessInput.Text != "")
             {
-                guessesLabel.Text = $"\n INSERT USERNAME HERE: {guessInput.Text}";
+                guessesLabel.Text += $"\n INSERT USERNAME HERE: {guessInput.Text}";
+                
             }
+        }
 
         private void redLabel_Click(object sender, EventArgs e)
         {
@@ -261,6 +263,11 @@ namespace Scribble
             drawPen.Color = c;
             drawPen.Width = 5;
             if (c == Color.White) { drawPen.Width = 10; }
+        }
+
+        private void TheButton_Click(object sender, EventArgs e)
+        {
+            g.Clear(Color.White);
         }
     }
 }
