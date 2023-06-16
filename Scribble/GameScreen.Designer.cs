@@ -50,7 +50,9 @@
             this.word3Button = new System.Windows.Forms.Button();
             this.wordLabel = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
+
             this.TheButton = new System.Windows.Forms.Button();
+            this.brownLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.eraserLabel)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,6 +91,7 @@
             // 
             this.guessInput.Font = new System.Drawing.Font("Comic Sans MS", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guessInput.Location = new System.Drawing.Point(1518, 1001);
+
             this.guessInput.Name = "guessInput";
             this.guessInput.Size = new System.Drawing.Size(344, 56);
             this.guessInput.TabIndex = 3;
@@ -142,7 +145,9 @@
             // 
             this.blueLabel.BackColor = System.Drawing.Color.Blue;
             this.blueLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+
             this.blueLabel.Location = new System.Drawing.Point(851, 984);
+
             this.blueLabel.Name = "blueLabel";
             this.blueLabel.Size = new System.Drawing.Size(60, 59);
             this.blueLabel.TabIndex = 8;
@@ -152,7 +157,9 @@
             // 
             this.purpleLabel.BackColor = System.Drawing.Color.Purple;
             this.purpleLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+
             this.purpleLabel.Location = new System.Drawing.Point(957, 984);
+
             this.purpleLabel.Name = "purpleLabel";
             this.purpleLabel.Size = new System.Drawing.Size(61, 59);
             this.purpleLabel.TabIndex = 9;
@@ -172,7 +179,9 @@
             // 
             this.greenLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.greenLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+
             this.greenLabel.Location = new System.Drawing.Point(743, 984);
+
             this.greenLabel.Name = "greenLabel";
             this.greenLabel.Size = new System.Drawing.Size(54, 57);
             this.greenLabel.TabIndex = 13;
@@ -182,7 +191,9 @@
             // 
             this.yellowLabel.BackColor = System.Drawing.Color.Yellow;
             this.yellowLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+
             this.yellowLabel.Location = new System.Drawing.Point(620, 984);
+
             this.yellowLabel.Name = "yellowLabel";
             this.yellowLabel.Size = new System.Drawing.Size(59, 57);
             this.yellowLabel.TabIndex = 14;
@@ -193,7 +204,9 @@
             // 
             this.orangeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.orangeLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+
             this.orangeLabel.Location = new System.Drawing.Point(506, 982);
+
             this.orangeLabel.Name = "orangeLabel";
             this.orangeLabel.Size = new System.Drawing.Size(59, 59);
             this.orangeLabel.TabIndex = 15;
@@ -206,7 +219,9 @@
             this.eraserLabel.BackgroundImage = global::Scribble.Properties.Resources._595_5956276_png_photo_pencil_eraser_color_clip_art_colour;
             this.eraserLabel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.eraserLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+
             this.eraserLabel.Location = new System.Drawing.Point(1186, 982);
+
             this.eraserLabel.Name = "eraserLabel";
             this.eraserLabel.Size = new System.Drawing.Size(58, 61);
             this.eraserLabel.TabIndex = 17;
@@ -230,7 +245,9 @@
             // 
             this.word1Button.Enabled = false;
             this.word1Button.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.word1Button.Location = new System.Drawing.Point(533, 500);
+
             this.word1Button.Name = "word1Button";
             this.word1Button.Size = new System.Drawing.Size(264, 331);
             this.word1Button.TabIndex = 19;
@@ -243,7 +260,9 @@
             // 
             this.word2Button.Enabled = false;
             this.word2Button.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.word2Button.Location = new System.Drawing.Point(823, 500);
+
             this.word2Button.Name = "word2Button";
             this.word2Button.Size = new System.Drawing.Size(249, 331);
             this.word2Button.TabIndex = 20;
@@ -256,7 +275,9 @@
             // 
             this.word3Button.Enabled = false;
             this.word3Button.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.word3Button.Location = new System.Drawing.Point(1095, 500);
+
             this.word3Button.Name = "word3Button";
             this.word3Button.Size = new System.Drawing.Size(238, 331);
             this.word3Button.TabIndex = 21;
@@ -280,6 +301,7 @@
             this.gameTimer.Interval = 20;
             this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
             // 
+
             // TheButton
             // 
             this.TheButton.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -290,6 +312,18 @@
             this.TheButton.Text = "Clear";
             this.TheButton.UseVisualStyleBackColor = true;
             this.TheButton.Click += new System.EventHandler(this.TheButton_Click);
+
+            // brownLabel
+            // 
+            this.brownLabel.BackColor = System.Drawing.Color.SaddleBrown;
+            this.brownLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.brownLabel.Location = new System.Drawing.Point(1724, 1474);
+            this.brownLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.brownLabel.Name = "brownLabel";
+            this.brownLabel.Size = new System.Drawing.Size(112, 112);
+            this.brownLabel.TabIndex = 23;
+            this.brownLabel.Click += new System.EventHandler(this.brownLabel_Click);
+
             // 
             // GameScreen
             // 
@@ -297,7 +331,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Orange;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+
             this.Controls.Add(this.TheButton);
+
+            this.Controls.Add(this.brownLabel);
+
             this.Controls.Add(this.wordLabel);
             this.Controls.Add(this.word3Button);
             this.Controls.Add(this.word2Button);
@@ -319,6 +357,9 @@
             this.Controls.Add(this.guessesLabel);
             this.Controls.Add(this.playerLabel);
             this.DoubleBuffered = true;
+
+            this.Margin = new System.Windows.Forms.Padding(4);
+
             this.Name = "GameScreen";
             this.Size = new System.Drawing.Size(1920, 1080);
             ((System.ComponentModel.ISupportInitialize)(this.eraserLabel)).EndInit();
@@ -350,6 +391,10 @@
         private System.Windows.Forms.Button word3Button;
         private System.Windows.Forms.Label wordLabel;
         private System.Windows.Forms.Timer gameTimer;
+
         private System.Windows.Forms.Button TheButton;
+
+        private System.Windows.Forms.Label brownLabel;
+
     }
 }
