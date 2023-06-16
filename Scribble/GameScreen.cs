@@ -28,6 +28,7 @@ namespace Scribble
         Graphics g;
         int? initx = null;
         int? inity = null;
+        Pen drawPen = new Pen(Color.Black, 5);
 
         int timerTick;
         int roundTime = 60;
@@ -36,22 +37,22 @@ namespace Scribble
         public GameScreen()
         {
             InitializeComponent();
-            WordSelect();
             g = drawLabel.CreateGraphics();
             NewRound();
+            WordSelect();
             gameState = "roundStart";
         }
 
         public void NewRound()
         {
-            timerTick= 0;
+            timerTick = 0;
             selectedWords.Clear();
             wordList.Clear();
             roundTime = 60;
 
-            for(int i = 0; i <ServerHub.players.Count; i++)
+            for (int i = 0; i < ServerHub.players.Count; i++)
             {
-                if(i == round)
+                if (i == round)
                 {
                     role[i] = "painter";
                 }
@@ -73,33 +74,33 @@ namespace Scribble
                 selectedWords.Add(randomWord.ToLower());
             }
 
-            for (int i = 0; i < role.Count; i++)
-            {
-                wordTitleLabel.Visible = true;
+            //for (int i = 0; i < role.Count; i++)
+            //{
+            wordTitleLabel.Visible = true;
 
-                if (role[i] == "painter")
-                {
-                    wordTitleLabel.Text = "Please Select a Word.";
+            //if (role[i] == "painter")
+            //{
+            wordTitleLabel.Text = "Please Select a Word.";
 
-                    word1Button.Text = selectedWords[0];
-                    word2Button.Text = selectedWords[1];
-                    word3Button.Text = selectedWords[2];
+            word1Button.Text = selectedWords[0];
+            word2Button.Text = selectedWords[1];
+            word3Button.Text = selectedWords[2];
 
-                    word1Button.Enabled = true;
-                    word2Button.Enabled = true;
-                    word3Button.Enabled = true;
+            word1Button.Enabled = true;
+            word2Button.Enabled = true;
+            word3Button.Enabled = true;
 
-                    word1Button.Visible = true;
-                    word2Button.Visible = true;
-                    word3Button.Visible = true;
+            word1Button.Visible = true;
+            word2Button.Visible = true;
+            word3Button.Visible = true;
 
-                    Refresh();
-                }
-                else
-                {
-                    wordTitleLabel.Text = "Waiting for painter.";
-                }
-            }
+            Refresh();
+            //}
+            //else
+            //{
+            //    wordTitleLabel.Text = "Waiting for painter.";
+            //}
+            //}
         }
 
         private void word1Button_Click(object sender, EventArgs e)
@@ -189,15 +190,15 @@ namespace Scribble
         {
             if (mouseDown)
             {
-                Pen p = new Pen(Color.Black);
-                g.DrawLine(p, new Point(initx ?? e.X, inity ?? e.Y), new Point(e.X, e.Y));
+                // Pen p = new Pen(Color.Black);
+                g.DrawLine(drawPen, new Point(initx ?? e.X, inity ?? e.Y), new Point(e.X, e.Y));
                 initx = e.X;
                 inity = e.Y;
-               
+
 
 
             }
-            
+
 
         }
 
@@ -214,6 +215,52 @@ namespace Scribble
             {
                 guessesLabel.Text = $"\n INSERT USERNAME HERE: {guessInput.Text}";
             }
+
+        private void redLabel_Click(object sender, EventArgs e)
+        {
+            drawColour(Color.Red);
+        }
+
+        private void orangeLabel_Click(object sender, EventArgs e)
+        {
+            drawColour(Color.Orange);
+        }
+
+        private void yellowLabel_Click(object sender, EventArgs e)
+        {
+            drawColour(Color.Yellow);
+        }
+
+        private void greenLabel_Click(object sender, EventArgs e)
+        {
+            drawColour(Color.Green);
+        }
+
+        private void blueLabel_Click(object sender, EventArgs e)
+        {
+            drawColour(Color.Blue);
+        }
+
+        private void purpleLabel_Click(object sender, EventArgs e)
+        {
+            drawColour(Color.Purple);
+        }
+
+        private void blackLabel_Click(object sender, EventArgs e)
+        {
+            drawColour(Color.Black);
+        }
+
+        private void eraserLabel_Click(object sender, EventArgs e)
+        {
+            drawColour(Color.White);
+        }
+
+        private void drawColour(Color c)
+        {
+            drawPen.Color = c;
+            drawPen.Width = 5;
+            if (c == Color.White) { drawPen.Width = 10; }
         }
     }
 }
