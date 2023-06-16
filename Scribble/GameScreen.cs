@@ -208,6 +208,7 @@ namespace Scribble
         {
             if (e.KeyCode == Keys.Enter && guessInput.Text != null && guessInput.Text != "")
             {
+
                 if (guessInput.Text == word)
                 {
                     guessesLabel.Text += $"\n USERNAME guessed the word!";
@@ -219,6 +220,7 @@ namespace Scribble
                 }
             }
         }
+
         private void redLabel_Click(object sender, EventArgs e)
         {
             drawColour(Color.Red);
@@ -269,6 +271,11 @@ namespace Scribble
             drawPen.Color = c;
             drawPen.Width = 5;
             if (c == Color.White) { drawPen.Width = 10; }
+        }
+
+        private void TheButton_Click(object sender, EventArgs e)
+        {
+            g.Clear(Color.White);
         }
     }
 }
