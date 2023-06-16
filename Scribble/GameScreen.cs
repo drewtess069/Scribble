@@ -175,7 +175,7 @@ namespace Scribble
             {
 
             }
-            
+
         }
 
         private void drawLabel_MouseDown(object sender, MouseEventArgs e)
@@ -206,11 +206,19 @@ namespace Scribble
 
         private void guessInput_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter && guessInput.Text != null || guessInput.Text != "")
+            if (e.KeyCode == Keys.Enter && guessInput.Text != null && guessInput.Text != "")
             {
-                guessesLabel.Text = $"\n INSERT USERNAME HERE: {guessInput.Text}";
+                if (guessInput.Text == word)
+                {
+                    guessesLabel.Text += $"\n USERNAME guessed the word!";
+                    guessInput.Clear();
+                }
+                else
+                {
+                    guessesLabel.Text = $"\n INSERT USERNAME HERE: {guessInput.Text}";
+                }
             }
-
+        }
         private void redLabel_Click(object sender, EventArgs e)
         {
             drawColour(Color.Red);
@@ -239,6 +247,11 @@ namespace Scribble
         private void purpleLabel_Click(object sender, EventArgs e)
         {
             drawColour(Color.Purple);
+        }
+
+        private void brownLabel_Click(object sender, EventArgs e)
+        {
+            drawColour(Color.SaddleBrown);
         }
 
         private void blackLabel_Click(object sender, EventArgs e)
