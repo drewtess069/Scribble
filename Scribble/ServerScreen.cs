@@ -15,10 +15,12 @@ namespace Scribble
 {
     public partial class ServerScreen : UserControl
     {
-        Network internet = new Network(Form1.ip);
+        public static Network internet = new Network(Form1.ip);
         public static string clientname;
         public static string servername;
+
         public static string userRole;
+
 
         public ServerScreen()
         {
@@ -29,9 +31,11 @@ namespace Scribble
         {
             if (serverInput.Text != "")
             {
-                servername = serverInput.Text;
+
                 internet.ServerSide();
+                servername = serverInput.Text; 
                 userRole = "host";
+
                 Form1.ChangeScreen(this, new ModeScreen());
 
             }
@@ -43,6 +47,7 @@ namespace Scribble
 
         private void joinButton_Click(object sender, EventArgs e)
         {
+
             //internet.ClientSide();
 
 
@@ -72,7 +77,6 @@ namespace Scribble
             //    Form1.ChangeScreen(this, new ServerHub());
 
             //}
-
 
 
         }
