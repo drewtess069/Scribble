@@ -50,7 +50,7 @@ namespace Scribble
         }
 
 
-        public void Coordinates(int x, int y)
+        public void Sender(int x, int y)
         {
             string recPoint = $"{x},{y}";
             server.Send(Encoding.UTF8.GetBytes(recPoint), recPoint.Length, SocketFlags.None);
