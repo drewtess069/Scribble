@@ -29,6 +29,7 @@ namespace Scribble
         int? initx = null;
         int? inity = null;
         Pen drawPen = new Pen(Color.Black, 5);
+        Point drawPoint;
 
         int timerTick;
         int roundTime = 60;
@@ -162,8 +163,14 @@ namespace Scribble
         private void gameTimer_Tick(object sender, EventArgs e)
         {
             timerTick++;
-
-            //try { }
+            try
+            {
+                drawPoint = ServerScreen.internet.Receiever();
+            }
+            catch (Exception)
+            {
+                
+            }
 
             if (timerTick != 0 && timerTick % 50 == 0)
             {
