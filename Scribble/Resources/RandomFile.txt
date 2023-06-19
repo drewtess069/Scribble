@@ -192,7 +192,7 @@ avocado
 apple pie
 bagel
 batter
-beans
+bean
 beer
 biscuit
 bread
@@ -224,7 +224,7 @@ dish
 drink
 donut
 dragonfruit
-eggs
+egg
 empanada
 enchilada
 entree

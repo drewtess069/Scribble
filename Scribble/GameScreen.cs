@@ -24,7 +24,7 @@ namespace Scribble
         int round = 0;
         int gameCount;
         bool mouseDown;
-        bool paintingEnabled;
+        bool paintingEnabled = false;
         Graphics g;
         int? initx = null;
         int? inity = null;
@@ -108,7 +108,7 @@ namespace Scribble
             word = word1Button.Text;
             DisableButtons();
             DisplayWord();
-            paintingEnabled = true;
+            gameTimer.Enabled = true;
         }
 
         private void word2Button_Click(object sender, EventArgs e)
@@ -116,7 +116,7 @@ namespace Scribble
             word = word2Button.Text;
             DisableButtons();
             DisplayWord();
-            paintingEnabled = true;
+            gameTimer.Enabled = true;
         }
 
         private void word3Button_Click(object sender, EventArgs e)
@@ -124,7 +124,7 @@ namespace Scribble
             word = word3Button.Text;
             DisableButtons();
             DisplayWord();
-            paintingEnabled = true;
+            gameTimer.Enabled = true;
         }
 
         public void DisableButtons()
@@ -180,7 +180,7 @@ namespace Scribble
 
         private void drawLabel_MouseDown(object sender, MouseEventArgs e)
         {
-            if (paintingEnabled)
+            if (gameTimer.Enabled)
             {
                 mouseDown = true;
             }
