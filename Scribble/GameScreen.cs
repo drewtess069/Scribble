@@ -194,6 +194,7 @@ namespace Scribble
                 g.DrawLine(drawPen, new Point(initx ?? e.X, inity ?? e.Y), new Point(e.X, e.Y));
                 initx = e.X;
                 inity = e.Y;
+                ServerScreen.internet.Coordinates(Convert.ToInt16(initx), Convert.ToInt16(inity));
             }
         }
 

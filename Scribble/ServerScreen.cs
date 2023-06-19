@@ -15,9 +15,11 @@ namespace Scribble
 {
     public partial class ServerScreen : UserControl
     {
-        Network internet = new Network(Form1.ip);
+        public static Network internet = new Network(Form1.ip);
         public static string clientname;
         public static string servername;
+
+        
         
         public ServerScreen()
         {
@@ -28,7 +30,8 @@ namespace Scribble
         {
             if (serverInput.Text != "")
             {
-                servername = serverInput.Text;
+                internet.ServerSide();
+                servername = serverInput.Text; 
                 Form1.ChangeScreen(this, new ModeScreen());
             }
             else
@@ -39,33 +42,35 @@ namespace Scribble
 
         private void joinButton_Click(object sender, EventArgs e)
         {
+           
 
-            //if (internet.ClientSide() == 0)
+            if (internet.ClientSide() == 0)
+            {
+
+                errorLabel.Visible = true;
+
+            }
+            else
+            {
+                //errorLabel.Visible = true;
+                //errorLabel.Text = "Connecting...";
+                //Thread.Sleep(1000);
+                Form1.ChangeScreen(this, new ServerHub());
+
+            }
+            //if (clientInput.Text == "")
             //{
-
-            //    errorLabel.Visible = true;
+            //    joinButton.Text = "Enter Username";
 
             //}
             //else
             //{
-            //    errorLabel.Visible = true;
-            //    errorLabel.Text = "Connecting...";
-            //    Thread.Sleep(1000);
+            //    clientname = clientInput.Text;
+            //    Form1.ChangeScreen(this, new ModeScreen());
 
             //}
-            if (clientInput.Text == "")
-            {
-                joinButton.Text = "Enter Username";
-                
-            }
-            else
-            {
-                clientname = clientInput.Text;
-                Form1.ChangeScreen(this, new ModeScreen());
 
-            }
-            
-            
+
 
         }
 

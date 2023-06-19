@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
+using System.Drawing;
 
 namespace Scribble
 {
    
-    internal class Network
+    public class Network
     {
         string ipadd;
         Socket server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -48,5 +49,12 @@ namespace Scribble
             }
         }
 
+        public void Coordinates(int x, int y)
+        {
+            string recPoint = $"{x},{y}";
+            server.Send(Encoding.UTF8.GetBytes(recPoint), recPoint.Length, SocketFlags.None);
+
+            
+        }
     }
 }
