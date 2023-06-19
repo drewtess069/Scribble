@@ -19,8 +19,9 @@ namespace Scribble
         public static string clientname;
         public static string servername;
 
-        
-        
+        public static string userRole;
+
+
         public ServerScreen()
         {
             InitializeComponent();
@@ -30,9 +31,13 @@ namespace Scribble
         {
             if (serverInput.Text != "")
             {
+
                 internet.ServerSide();
                 servername = serverInput.Text; 
+                userRole = "host";
+
                 Form1.ChangeScreen(this, new ModeScreen());
+
             }
             else
             {
@@ -42,7 +47,9 @@ namespace Scribble
 
         private void joinButton_Click(object sender, EventArgs e)
         {
-           
+
+            //internet.ClientSide();
+
 
             if (internet.ClientSide() == 0)
             {
@@ -52,9 +59,10 @@ namespace Scribble
             }
             else
             {
-                //errorLabel.Visible = true;
-                //errorLabel.Text = "Connecting...";
-                //Thread.Sleep(1000);
+                userRole = "client";
+                errorLabel.Visible = true;
+                errorLabel.Text = "connecting...";
+                Thread.Sleep(1000);
                 Form1.ChangeScreen(this, new ServerHub());
 
             }
@@ -66,10 +74,9 @@ namespace Scribble
             //else
             //{
             //    clientname = clientInput.Text;
-            //    Form1.ChangeScreen(this, new ModeScreen());
+            //    Form1.ChangeScreen(this, new ServerHub());
 
             //}
-
 
 
         }

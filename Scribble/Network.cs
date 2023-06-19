@@ -49,6 +49,7 @@ namespace Scribble
             }
         }
 
+
         public void Coordinates(int x, int y)
         {
             string recPoint = $"{x},{y}";
@@ -56,5 +57,19 @@ namespace Scribble
 
             
         }
+
+        //public string Username(string user)
+        //{
+        //    if (ServerScreen.userRole == "host")
+        //    {
+        //        byte[] stringData = new byte[1024];
+        //        stringData = Encoding.UTF8.GetBytes(user);
+        //        client.Send(stringData);
+        //    }
+        //    server.Receive(stringData);
+
+        //}
+
+
     }
 }
