@@ -48,5 +48,17 @@ namespace Scribble
             }
         }
 
+        //public string Username(string user)
+        //{
+        //    if (ServerScreen.userRole == "host")
+        //    {
+        //        byte[] stringData = new byte[1024];
+        //        stringData = Encoding.UTF8.GetBytes(user);
+        //        client.Send(stringData);
+        //    }
+        //    server.Receive(stringData);
+
+        //}
+
     }
 }
