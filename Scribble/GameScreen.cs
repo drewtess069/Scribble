@@ -66,42 +66,45 @@ namespace Scribble
 
         public void WordSelect()
         {
-            wordList = File.ReadAllLines($"Resources\\{ModeScreen.mode}File.txt").ToList();
-
-            for (int i = 0; i < 3; i++)
+            if (ServerScreen.userRole == "host")
             {
-                int index = wordGen.Next(0, wordList.Count);
-                string randomWord = wordList[index];
-                selectedWords.Add(randomWord.ToLower());
+                wordList = File.ReadAllLines($"Resources\\{ModeScreen.mode}File.txt").ToList();
+
+                for (int i = 0; i < 3; i++)
+                {
+                    int index = wordGen.Next(0, wordList.Count);
+                    string randomWord = wordList[index];
+                    selectedWords.Add(randomWord.ToLower());
+                }
+
+                //for (int i = 0; i < role.Count; i++)
+                //{
+                wordTitleLabel.Visible = true;
+
+                //if (role[i] == "painter")
+                //{
+                wordTitleLabel.Text = "Please Select a Word.";
+
+                word1Button.Text = selectedWords[0];
+                word2Button.Text = selectedWords[1];
+                word3Button.Text = selectedWords[2];
+
+                word1Button.Enabled = true;
+                word2Button.Enabled = true;
+                word3Button.Enabled = true;
+
+                word1Button.Visible = true;
+                word2Button.Visible = true;
+                word3Button.Visible = true;
+
+                Refresh();
+                //}
+                //else
+                //{
+                //    wordTitleLabel.Text = "Waiting for painter.";
+                //}
+                //}
             }
-
-            //for (int i = 0; i < role.Count; i++)
-            //{
-            wordTitleLabel.Visible = true;
-
-            //if (role[i] == "painter")
-            //{
-            wordTitleLabel.Text = "Please Select a Word.";
-
-            word1Button.Text = selectedWords[0];
-            word2Button.Text = selectedWords[1];
-            word3Button.Text = selectedWords[2];
-
-            word1Button.Enabled = true;
-            word2Button.Enabled = true;
-            word3Button.Enabled = true;
-
-            word1Button.Visible = true;
-            word2Button.Visible = true;
-            word3Button.Visible = true;
-
-            Refresh();
-            //}
-            //else
-            //{
-            //    wordTitleLabel.Text = "Waiting for painter.";
-            //}
-            //}
         }
 
         private void word1Button_Click(object sender, EventArgs e)
@@ -168,6 +171,7 @@ namespace Scribble
             {
                 
             }
+
             if (timerTick != 0 && timerTick % 50 == 0)
             {
                 roundTime--;
