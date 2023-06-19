@@ -15,6 +15,7 @@ namespace Scribble
         string ipadd;
         Socket server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         Socket client;
+        byte[] data;
 
         public Network(string _ipadd)
         {
@@ -49,12 +50,24 @@ namespace Scribble
             }
         }
 
-        public void Coordinates(int x, int y)
+        public void Sender(int x, int y)
         {
             string recPoint = $"{x},{y}";
-            server.Send(Encoding.UTF8.GetBytes(recPoint), recPoint.Length, SocketFlags.None);
+            data = Encoding.UTF8.GetBytes(recPoint);
+            client.Send(data, data.Length, SocketFlags.None);
 
             
         }
+        public Point Receiever()
+        {
+            var recieve = server.Receive(data);
+
+            string stringPoint = $"{Encoding.UTF8.GetString(data, 0, recieve)}";
+            int index = stringPoint.IndexOf(",");
+            string x = stringPoint.Substring(0, index);
+            string y = stringPoint.Substring(index + 1);
+            return new Point(Convert.ToInt16(x), Convert.ToInt16(y));
+        }
+
     }
 }
