@@ -183,12 +183,6 @@ namespace Scribble
                 gameTimer.Stop();
                 round++;
             }
-
-            for (int i = 0; i < role.Count; i++)
-            {
-
-            }
-
         }
 
         private void drawLabel_MouseDown(object sender, MouseEventArgs e)
