@@ -20,11 +20,10 @@ namespace Scribble
         Random wordGen = new Random();
         string word;
         string gameState;
-        List<string> role = new List<string>();
-        int round = 0;
+        string role;
+        int round = 1;
         int gameCount;
         bool mouseDown;
-        bool paintingEnabled = false;
         Graphics g;
         int? initx = null;
         int? inity = null;
@@ -51,16 +50,22 @@ namespace Scribble
             wordList.Clear();
             roundTime = 60;
 
-            for (int i = 0; i < ServerHub.players.Count; i++)
+            if(round % 2 == 0 && ServerScreen.userRole == "client")
             {
-                if (i == round)
-                {
-                    role[i] = "painter";
-                }
-                else
-                {
-                    role[i] = "player";
-                }
+                role = "painter";
+            }
+            else if (round % 2 == 0 && ServerScreen.userRole == "host")
+            {
+                role = "guesser";
+            }
+
+            if (round % 2 != 0 && ServerScreen.userRole == "host")
+            {
+                role = "painter";
+            }
+            else if (round % 2 != 0 && ServerScreen.userRole == "client")
+            {
+                role = "guesser";
             }
         }
 
@@ -77,12 +82,7 @@ namespace Scribble
                     selectedWords.Add(randomWord.ToLower());
                 }
 
-                //for (int i = 0; i < role.Count; i++)
-                //{
                 wordTitleLabel.Visible = true;
-
-                //if (role[i] == "painter")
-                //{
                 wordTitleLabel.Text = "Please Select a Word.";
 
                 word1Button.Text = selectedWords[0];
@@ -98,12 +98,6 @@ namespace Scribble
                 word3Button.Visible = true;
 
                 Refresh();
-                //}
-                //else
-                //{
-                //    wordTitleLabel.Text = "Waiting for painter.";
-                //}
-                //}
             }
         }
 
@@ -165,7 +159,11 @@ namespace Scribble
             timerTick++;
             try
             {
-                drawPoint = ServerScreen.internet.Receiever();
+                if (role == "guesser")
+                {
+                    drawPoint = ServerScreen.internet.Receiever();
+                    g.DrawLine(drawPen, drawPoint, drawPoint);
+                }
             }
             catch (Exception)
             {

@@ -34,6 +34,8 @@ namespace Scribble
 
             client = newsock.Accept();
 
+            RecUser();
+
         }
         public int ClientSide()
         {
@@ -42,6 +44,7 @@ namespace Scribble
             try
             {
                 server.Connect(ipep);
+                RecUser();
                 return 1;
             }
             catch (Exception)
@@ -54,14 +57,27 @@ namespace Scribble
         {
             string recPoint = $"{x},{y}";
             data = Encoding.UTF8.GetBytes(recPoint);
-            client.Send(data, data.Length, SocketFlags.None);
-
+            if (ServerScreen.userRole == "host")
+            {
+                client.Send(data, data.Length, SocketFlags.None);
+            }
+            else
+            {
+                server.Send(data, data.Length, SocketFlags.None);
+            }
             
         }
         public Point Receiever()
         {
-            var recieve = server.Receive(data);
-
+            int recieve;
+            if (ServerScreen.userRole == "client")
+            {
+                 recieve = server.Receive(data);
+            }
+            else
+            {
+                 recieve = client.Receive(data);
+            }
             string stringPoint = $"{Encoding.UTF8.GetString(data, 0, recieve)}";
             int index = stringPoint.IndexOf(",");
             string x = stringPoint.Substring(0, index);
@@ -69,5 +85,33 @@ namespace Scribble
             return new Point(Convert.ToInt16(x), Convert.ToInt16(y));
         }
 
+        public void sendUser(string username)
+        {
+            data = Encoding.UTF8.GetBytes(username);
+            if (ServerScreen.userRole == "host")
+            {
+                client.Send(data, data.Length, SocketFlags.None);
+            }
+            else
+            {
+                server.Send(data, data.Length, SocketFlags.None);
+            }
+        }
+
+        public string RecUser()
+        {
+            int recieve;
+            if (ServerScreen.userRole == "client")
+            {
+                recieve = server.Receive(data);
+            }
+            else
+            {
+                recieve = client.Receive(data);
+            }
+            string username = $"{Encoding.UTF8.GetString(data, 0, recieve)}";
+
+            return username;
+        }
     }
 }
