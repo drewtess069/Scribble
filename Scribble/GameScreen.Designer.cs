@@ -52,6 +52,7 @@
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.TheButton = new System.Windows.Forms.Button();
             this.brownLabel = new System.Windows.Forms.Label();
+            this.clientEnable = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.eraserLabel)).BeginInit();
             this.SuspendLayout();
             // 
@@ -304,12 +305,23 @@
             this.brownLabel.TabIndex = 23;
             this.brownLabel.Click += new System.EventHandler(this.brownLabel_Click);
             // 
+            // clientEnable
+            // 
+            this.clientEnable.Location = new System.Drawing.Point(31, 1001);
+            this.clientEnable.Name = "clientEnable";
+            this.clientEnable.Size = new System.Drawing.Size(135, 49);
+            this.clientEnable.TabIndex = 24;
+            this.clientEnable.Text = "Client Begin";
+            this.clientEnable.UseVisualStyleBackColor = true;
+            this.clientEnable.Click += new System.EventHandler(this.clientEnable_Click);
+            // 
             // GameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Orange;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Controls.Add(this.clientEnable);
             this.Controls.Add(this.TheButton);
             this.Controls.Add(this.brownLabel);
             this.Controls.Add(this.wordLabel);
@@ -336,6 +348,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GameScreen";
             this.Size = new System.Drawing.Size(1920, 1080);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.GameScreen_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.eraserLabel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -369,6 +382,6 @@
         private System.Windows.Forms.Button TheButton;
 
         private System.Windows.Forms.Label brownLabel;
-
+        private System.Windows.Forms.Button clientEnable;
     }
 }

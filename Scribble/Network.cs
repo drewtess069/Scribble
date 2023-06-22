@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing;
 using System.Net;
 using System.Net.Sockets;
-using System.Drawing;
+using System.Text;
 
 namespace Scribble
 {
-   
+
     public class Network
     {
         string ipadd;
@@ -34,7 +31,7 @@ namespace Scribble
 
             client = newsock.Accept();
 
-            RecUser();
+            //RecUser();
 
         }
         public int ClientSide()
@@ -44,7 +41,7 @@ namespace Scribble
             try
             {
                 server.Connect(ipep);
-                RecUser();
+                //RecUser();
                 return 1;
             }
             catch (Exception)
@@ -65,24 +62,37 @@ namespace Scribble
             {
                 server.Send(data, data.Length, SocketFlags.None);
             }
-            
+
         }
         public Point Receiever()
         {
-            int recieve;
+            //data
+            data = new byte[1024];
+            //var recieve;
             if (ServerScreen.userRole == "client")
             {
-                 recieve = server.Receive(data);
+                try
+                {
+                 var   recieve = server.Receive(data);
+                    string stringPoint = $"{Encoding.UTF8.GetString(data, 0, recieve)}";
+                    int index = stringPoint.IndexOf(",");
+                    string x = stringPoint.Substring(0, index);
+                    string y = stringPoint.Substring(index + 1);
+                    return new Point(Convert.ToInt16(x), Convert.ToInt16(y));
+                }
+                catch { };
             }
             else
             {
-                 recieve = client.Receive(data);
+                var recieve = client.Receive(data);
+                string stringPoint = $"{Encoding.UTF8.GetString(data, 0, recieve)}";
+                int index = stringPoint.IndexOf(",");
+                string x = stringPoint.Substring(0, index);
+                string y = stringPoint.Substring(index + 1);
+                return new Point(Convert.ToInt16(x), Convert.ToInt16(y));
             }
-            string stringPoint = $"{Encoding.UTF8.GetString(data, 0, recieve)}";
-            int index = stringPoint.IndexOf(",");
-            string x = stringPoint.Substring(0, index);
-            string y = stringPoint.Substring(index + 1);
-            return new Point(Convert.ToInt16(x), Convert.ToInt16(y));
+            return new Point(0, 0);
+
         }
 
         public void sendUser(string username)

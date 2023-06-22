@@ -17,6 +17,7 @@ namespace Scribble
     {
         List<string> wordList = new List<string>();
         List<string> selectedWords = new List<string>();
+        List<Point> pointList = new List<Point>();
         Random wordGen = new Random();
         string word;
         string gameState;
@@ -50,7 +51,7 @@ namespace Scribble
             wordList.Clear();
             roundTime = 60;
 
-            if(round % 2 == 0 && ServerScreen.userRole == "client")
+            if (round % 2 == 0 && ServerScreen.userRole == "client")
             {
                 role = "painter";
             }
@@ -157,18 +158,16 @@ namespace Scribble
         private void gameTimer_Tick(object sender, EventArgs e)
         {
             timerTick++;
-            try
+            ServerScreen.internet.Receiever();
+
+            if (role == "guesser")
             {
-                if (role == "guesser")
-                {
-                    drawPoint = ServerScreen.internet.Receiever();
-                    g.DrawLine(drawPen, drawPoint, drawPoint);
-                }
+                ServerScreen.internet.Receiever();
+                drawPoint = ServerScreen.internet.Receiever();
+                pointList.Add(drawPoint);
+                Refresh();
             }
-            catch (Exception)
-            {
-                
-            }
+
 
             if (timerTick != 0 && timerTick % 50 == 0)
             {
@@ -195,11 +194,13 @@ namespace Scribble
         {
             if (mouseDown)
             {
-                // Pen p = new Pen(Color.Black);
-                g.DrawLine(drawPen, new Point(initx ?? e.X, inity ?? e.Y), new Point(e.X, e.Y));
-                initx = e.X;
-                inity = e.Y;
-                ServerScreen.internet.Sender(Convert.ToInt16(initx), Convert.ToInt16(inity));
+
+                    // Pen p = new Pen(Color.Black);
+                    g.DrawLine(drawPen, new Point(initx ?? e.X, inity ?? e.Y), new Point(e.X, e.Y));
+                    initx = e.X;
+                    inity = e.Y;
+                    ServerScreen.internet.Sender(Convert.ToInt16(initx), Convert.ToInt16(inity));
+                
             }
         }
 
@@ -282,6 +283,19 @@ namespace Scribble
         private void TheButton_Click(object sender, EventArgs e)
         {
             g.Clear(Color.White);
+        }
+
+        private void clientEnable_Click(object sender, EventArgs e)
+        {
+            gameTimer.Enabled = true;
+        }
+
+        private void GameScreen_Paint(object sender, PaintEventArgs e)
+        {
+            foreach(Point p in pointList)
+            {
+                e.Graphics.DrawLine(drawPen, p.X, p.Y, p.X, p.Y);
+            }
         }
     }
 }

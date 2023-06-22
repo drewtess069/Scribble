@@ -35,7 +35,7 @@ namespace Scribble
                 internet.ServerSide();
                 servername = serverInput.Text; 
                 userRole = "host";
-                ServerScreen.internet.sendUser(servername);
+                //ServerScreen.internet.sendUser(servername);
 
                 Form1.ChangeScreen(this, new ModeScreen());
 
@@ -65,7 +65,7 @@ namespace Scribble
                 errorLabel.Text = "connecting...";
                 Thread.Sleep(1000);
                 string user = clientInput.Text;
-                ServerScreen.internet.sendUser(user);
+                //ServerScreen.internet.sendUser(user);
                 Form1.ChangeScreen(this, new ServerHub());
 
             }
